@@ -1,0 +1,16 @@
+{
+  "intents": [
+    {
+      "intent": "TimeFirstPersonIntent"
+    },
+    {
+      "intent": "TimeThirdPersonIntent"
+    },
+    {
+      "intent": "MoneyFirstPersonIntent"
+    },
+    {
+      "intent": "MoneyThirdPersonIntent"
+    }
+  ]
+}

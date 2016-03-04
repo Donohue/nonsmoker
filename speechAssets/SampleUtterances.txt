@@ -1,0 +1,19 @@
+TimeFirstPersonIntent how many days since I quit
+TimeFirstPersonIntent how many days since I quit smoking
+TimeFirstPersonIntent how long since I quit
+TimeFirstPersonIntent how long since I quit smoking
+TimeFirstPersonIntent how many days since I stopped smoking
+TimeFirstPersonIntent how long since I stopped smoking
+
+TimeThirdPersonIntent how many days since brian quit
+TimeThirdPersonIntent how many days since brian quit smoking
+TimeThirdPersonIntent how long since brian quit
+TimeThirdPersonIntent how long since brian quit smoking
+TimeThirdPersonIntent how many days since brian stopped smoking
+TimeThirdPersonIntent how long since brian stopped smoking
+
+MoneyFirstPersonIntent how much money have I saved since I quit
+MoneyFirstPersonIntent how much money have I saved since I quit smoking
+MoneyThirdPersonIntent how much money has brian saved since he quit
+MoneyThirdPersonIntent how much money has brian saved since he quit smoking
+
