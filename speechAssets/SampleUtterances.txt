@@ -2,14 +2,21 @@ GetTimeIntent how long since I quit
 GetTimeIntent how long since I quit smoking
 GetTimeIntent how long it has been since I quit
 GetTimeIntent how long it has been since I quit smoking
-
 GetTimeIntent how long since I stopped
 GetTimeIntent how long since I stopped smoking
-
 GetTimeIntent when I smoked last
 GetTimeIntent when I smoked my last cigarette
 GetTimeIntent when I smoked my final cigarette
 GetTimeIntent when I stopped smoking
+
+GetDaysIntent how many days
+GetDaysIntent how many days it has been
+GetDaysIntent how many days has it been since I quit
+GetDaysIntent how many days has it been since I quit smoking
+GetDaysIntent how many days has it been since I stopped
+GetDaysIntent how many days has it been since I stopped smoking
+GetDaysIntent how many days has it been since my last cigarette
+GetDaysIntent how many days has it been since my final cigarette
 
 SetTimeIntent set my quit day
 SetTimeIntent set my quit date

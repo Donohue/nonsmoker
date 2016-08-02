@@ -54,6 +54,8 @@ def on_intent(intent_request, session):
     # Dispatch to your skill's intent handlers
     if intent_name == 'GetTimeIntent':
         return get_time_intent(table, user_id)
+    elif intent_name == 'GetDaysIntent':
+        return get_time_intent(table, user_id, use_days=True)
     elif intent_name == 'SetTimeIntent':
         return set_time_intent()
     elif intent_name == 'SetDayMonthIntent':
@@ -67,7 +69,7 @@ def on_intent(intent_request, session):
 
 
 # --------------- Functions that control the skill's behavior ------------------
-def get_time_intent(table, user_id):
+def get_time_intent(table, user_id, use_days=False):
     response = table.get_item(
         Key={"user_id": user_id}
     )
@@ -79,7 +81,7 @@ def get_time_intent(table, user_id):
 
     return build_response(
         {},
-        build_speechlet_response(time_response(quit_date))
+        build_speechlet_response(time_response(quit_date, use_days=use_days))
     )
 
 def set_time_intent():
@@ -149,11 +151,11 @@ def random_encouragement():
     ]
     return random.choice(encouragement)
 
-def time_response(quit_date):
+def time_response(quit_date, use_days=False):
     if datetime_from_date(quit_date) == today():
         return "Lao Tzu once said, the journey of a thousand miles begins with a single step. Congratulations on becoming a nonsmoker."
     else:
-        return "It has been %s since you stopped smoking. %s" % (time_elapsed(quit_date), random_encouragement())
+        return "It has been %s since you stopped smoking. %s" % (time_elapsed(quit_date, use_days=use_days), random_encouragement())
 
 def unit_string(string, quantity):
     return string if quantity == 1 else string + 's'
@@ -176,13 +178,15 @@ def datetime_from_date(date):
 def today():
     return datetime.datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
 
-def time_elapsed(quit_date):
+def time_elapsed(quit_date, use_days=False):
     date = datetime_from_date(quit_date)
     delta = today() - date
     years = delta.days / 365
     months = (delta.days % 365) / 30
     days = delta.days % 365 % 30
-    
+   
+    if use_days:
+        return '%d %s' % (delta.days, day_string(delta.days))
     if years >= 1 and delta.days % 365 == 0:
         return '%d %s' % (years, year_string(years))
     elif years >= 1 and months >= 1 and days == 0:

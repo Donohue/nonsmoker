@@ -4,6 +4,9 @@
       "intent": "GetTimeIntent"
     },
     {
+      "intent": "GetDaysIntent"
+    },
+    {
       "intent": "SetTimeIntent"
     },
     {
