@@ -1,16 +1,31 @@
 {
   "intents": [
     {
-      "intent": "TimeFirstPersonIntent"
+      "intent": "GetTimeIntent"
     },
     {
-      "intent": "TimeThirdPersonIntent"
+      "intent": "SetTimeIntent"
     },
     {
-      "intent": "MoneyFirstPersonIntent"
+      "intent": "SetDayMonthIntent",
+      "slots": [
+        {
+            "name": "day_month",
+            "type": "AMAZON.DATE"
+        }
+      ]
     },
     {
-      "intent": "MoneyThirdPersonIntent"
+      "intent": "SetYearIntent",
+      "slots": [
+        {
+            "name": "year",
+            "type": "AMAZON.FOUR_DIGIT_NUMBER"
+        }
+      ]
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
     }
   ]
 }

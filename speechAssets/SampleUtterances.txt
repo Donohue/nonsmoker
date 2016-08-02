@@ -1,19 +1,21 @@
-TimeFirstPersonIntent how many days since I quit
-TimeFirstPersonIntent how many days since I quit smoking
-TimeFirstPersonIntent how long since I quit
-TimeFirstPersonIntent how long since I quit smoking
-TimeFirstPersonIntent how many days since I stopped smoking
-TimeFirstPersonIntent how long since I stopped smoking
+GetTimeIntent how long since I quit
+GetTimeIntent how long since I quit smoking
+GetTimeIntent how long it has been since I quit
+GetTimeIntent how long it has been since I quit smoking
 
-TimeThirdPersonIntent how many days since brian quit
-TimeThirdPersonIntent how many days since brian quit smoking
-TimeThirdPersonIntent how long since brian quit
-TimeThirdPersonIntent how long since brian quit smoking
-TimeThirdPersonIntent how many days since brian stopped smoking
-TimeThirdPersonIntent how long since brian stopped smoking
+GetTimeIntent how long since I stopped
+GetTimeIntent how long since I stopped smoking
 
-MoneyFirstPersonIntent how much money have I saved since I quit
-MoneyFirstPersonIntent how much money have I saved since I quit smoking
-MoneyThirdPersonIntent how much money has brian saved since he quit
-MoneyThirdPersonIntent how much money has brian saved since he quit smoking
+GetTimeIntent when I smoked last
+GetTimeIntent when I smoked my last cigarette
+GetTimeIntent when I smoked my final cigarette
+GetTimeIntent when I stopped smoking
+
+SetTimeIntent set my quit day
+SetTimeIntent set my quit date
+SetTimeIntent set my stop day
+SetTimeIntent set my stop date
+
+SetDayMonthIntent {day_month}
+SetYearIntent {year}
 

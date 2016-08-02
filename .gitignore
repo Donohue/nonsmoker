@@ -1,1 +1,4 @@
 *.swp
+*.zip
+site-packages
+venv
