@@ -153,7 +153,7 @@ def random_encouragement():
 
 def time_response(quit_date, use_days=False):
     if datetime_from_date(quit_date) == today():
-        return "Lao Tzu once said, the journey of a thousand miles begins with a single step. Congratulations on becoming a nonsmoker."
+        return "Today is the first day you stopped smoking. Lao Tzu once said, the journey of a thousand miles begins with a single step. Congratulations on becoming a nonsmoker."
     else:
         return "It has been %s since you stopped smoking. %s" % (time_elapsed(quit_date, use_days=use_days), random_encouragement())
 
