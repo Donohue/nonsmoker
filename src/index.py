@@ -86,7 +86,8 @@ def set_time_intent():
     return build_response(
         {},
         build_speechlet_response(
-            "What month and day did you stop smoking?"
+            "What month and day did you stop smoking?",
+            should_end_session=False
         )
     )
 
@@ -96,7 +97,8 @@ def set_day_month_intent(table, user_id, intent):
     return build_response(
         {'month': date.month, 'day': date.day},
         build_speechlet_response(
-            "Great, you stopped smoking on %s %s. Which year did you stop smoking?" % (date.strftime('%B'), day_date_string(date.day))
+            "Great, you stopped smoking on %s %s. Which year did you stop smoking?" % (date.strftime('%B'), day_date_string(date.day)),
+            should_end_session=False
         )
     )
 
@@ -113,7 +115,8 @@ def set_year_intent(table, user_id, session, intent):
         return build_response(
             {},
             build_speechlet_response(
-                "The stop date you gave, %s %s %s, is in the future. What month and day did you stop smoking?" % (month_from_date(quit_date), day_date_string(day), year)
+                "The stop date you gave, %s %s %s, is in the future. What month and day did you stop smoking?" % (month_from_date(quit_date), day_date_string(day), year),
+                should_end_session=False
             )
         )
 
