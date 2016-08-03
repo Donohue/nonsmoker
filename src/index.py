@@ -64,6 +64,8 @@ def on_intent(intent_request, session):
         return set_year_intent(table, user_id, session, intent)
     elif intent_name == "AMAZON.HelpIntent":
         return help_response()
+    elif intent_name == "AMAZON.CancelIntent" || intent_name == "AMAZON.StopIntent":
+        pass # Intentionally left blank, do not throw an exception
     else:
         raise ValueError("Invalid intent: %s" % intent_name)
 
