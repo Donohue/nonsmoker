@@ -196,7 +196,7 @@ def time_elapsed(quit_date, use_days=False):
     elif years >= 1:
         return '%d %s and %d %s' % (years, year_string(years), days, day_string(days))
     elif months >= 1 and days == 0:
-        return '%d %s' % (month, month_string(months))
+        return '%d %s' % (months, month_string(months))
     elif months >= 1:
         return '%d %s and %d %s' % (months, month_string(months), days, day_string(days))
     else:
