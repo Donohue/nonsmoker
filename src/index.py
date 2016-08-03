@@ -95,7 +95,18 @@ def set_time_intent():
 
 def set_day_month_intent(table, user_id, intent):
     day_month = intent['slots']['day_month']['value']
-    date = dateutil.parser.parse(day_month)
+    try:
+        date = dateutil.parser.parse(day_month)
+    except Exception, e:
+        print("There was an error parsing %s: %s" % (day_month, str(e)))
+        return build_response(
+            {},
+            build_speechlet_response(
+                "Sorry I didn't understand that. What month and day did you stop smoking?",
+                should_end_session=False
+            )
+        )
+
     return build_response(
         {'month': date.month, 'day': date.day},
         build_speechlet_response(
