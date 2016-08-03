@@ -5,6 +5,8 @@ GetTimeIntent how long it has been since I quit smoking
 GetTimeIntent how long since I stopped
 GetTimeIntent how long since I stopped smoking
 GetTimeIntent how long it has been since I stopped smoking 
+GetTimeIntent how long I have been smoke free
+GetTimeIntent how long have I been smoke free
 GetTimeIntent when I smoked last
 GetTimeIntent when I smoked my last cigarette
 GetTimeIntent when I smoked my final cigarette
@@ -13,6 +15,8 @@ GetTimeIntent when I stopped smoking
 GetDaysIntent how many days
 GetDaysIntent how many days it has been
 GetDaysIntent how many days has it been
+GetDaysIntent how many days have I been smoke free
+GetDaysIntent how many days I have been smoke free
 GetDaysIntent how many days has it been since I quit
 GetDaysIntent how many days has it been since I quit smoking
 GetDaysIntent how many days has it been since I stopped
