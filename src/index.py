@@ -149,7 +149,8 @@ def help_response():
     return build_response(
         {},
         build_speechlet_response(
-            "You can ask how long it has been since you stopped smoking or set your stop date."
+            "You can ask how long it has been since you stopped smoking or set your stop date. How can I help?",
+            should_end_session=False
         )
     )
 
