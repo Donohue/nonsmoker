@@ -64,8 +64,8 @@ def on_intent(intent_request, session):
         return set_year_intent(table, user_id, session, intent)
     elif intent_name == "AMAZON.HelpIntent":
         return help_response()
-    elif intent_name == "AMAZON.CancelIntent" || intent_name == "AMAZON.StopIntent":
-        pass # Intentionally left blank, do not throw an exception
+    elif intent_name == "AMAZON.CancelIntent" or intent_name == "AMAZON.StopIntent":
+        return bye_response()
     else:
         raise ValueError("Invalid intent: %s" % intent_name)
 
@@ -145,6 +145,12 @@ def set_year_intent(table, user_id, session, intent):
         build_speechlet_response(
             "Your stop date has been set to %s %s, %s. %s" % (month_from_date(quit_date), day_date_string(day), year, time_response(quit_date))
         )
+    )
+
+def bye_response():
+    return build_response(
+        {},
+        build_speechlet_response("Good-bye")
     )
 
 def help_response():
