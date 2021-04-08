@@ -99,7 +99,7 @@ def set_day_month_intent(table, user_id, intent):
     day_month = intent['slots']['day_month']['value']
     try:
         date = dateutil.parser.parse(day_month)
-    except Exception, e:
+    except Exception as e:
         print("There was an error parsing %s: %s" % (day_month, str(e)))
         return build_response(
             {},
